@@ -6,7 +6,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: rgb(74, 74, 74); /* Couleur de texte foncé */
+  color: rgb(74, 74, 74);
 }
 
 header {
@@ -30,7 +30,7 @@ header {
 .name h2 {
   margin: 0;
   font-size: 1.2rem;
-  transition: transform 0.3s ease; /* Ajout de l'animation */
+  transition: transform 0.3s ease;
 }
 
 .name h1 {
@@ -43,7 +43,7 @@ header {
 
 .name:hover h1,
 .name:hover h2 {
-  transform: scale(1.1); /* Effet d'agrandissement au survol */
+  transform: scale(1.1);
 }
 
 nav ul {
@@ -56,7 +56,7 @@ nav ul {
 nav li {
   display: inline;
   margin: 0 7px;
-  white-space: nowrap; /* Empêche le dernier bouton de se casser sur une nouvelle ligne */
+  white-space: nowrap;
 }
 
 nav a {
@@ -94,36 +94,35 @@ section {
 }
 
 #a-propos {
-  background-color: #f6f4e8; /* Couleur pastel */
+  background-color: #f6f4e8;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
-  margin: 100px auto; /* Centrage vertical */
-  max-width: 800px; /* Limite la largeur du contenu */
+  margin: 100px auto;
+  max-width: 800px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: fade-in 1s;
 }
 
 #a-propos h1 {
-  color: #f26659; /* Couleur pastel */
+  color: #f26659;
   font-size: 2em;
 }
 
 #a-propos p {
-  color: #4a4a4a; /* Couleur de texte foncé */
+  color: #4a4a4a;
   font-size: 1.2em;
   line-height: 1.6;
 }
 
 #a-propos p:first-child {
-  margin-top: 0; /* Supprime la marge en haut du premier paragraphe */
+  margin-top: 0;
 }
 
 #a-propos p:last-child {
-  margin-bottom: 0; /* Supprime la marge en bas du dernier paragraphe */
+  margin-bottom: 0;
 }
 
-/* Ajoutez des animations (optionnel) */
 #a-propos {
   animation: fade-in 1s;
 }
@@ -177,7 +176,7 @@ section {
 .projet-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Aligne les projets en haut */
+  align-items: flex-start;
   margin-top: 20px;
   border-top: 2px solid #cccccc;
   padding-top: 20px;
@@ -198,10 +197,7 @@ section {
   display: inline-block;
 }
 
-#projets h2 {
-  text-align: center;
-}
-
+#projets h2,
 #projets h3 {
   text-align: center;
 }
@@ -275,13 +271,13 @@ section h2,
 section h3,
 .projet h3,
 .offre h3 {
-  color: #f26659; /* Couleur pastel */
+  color: #f26659;
 }
 
 section p,
 .projet p,
 .offre p {
-  color: #4a4a4a; /* Couleur de texte foncé */
+  color: #4a4a4a;
 }
 
 .projet a,
