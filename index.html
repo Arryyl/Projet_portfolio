@@ -24,10 +24,9 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#a-propos">À propos</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#offres">Offres d'emploi</a></li>
+          <li><a href="#a-propos" data-parent="#header">À propos</a></li>
+          <li><a href="#competences" data-parent="#header">Compétences</a></li>
+          <li><a href="#projets" data-parent="#header">Projets</a></li>
         </ul>
       </nav>
     </header>
@@ -82,7 +81,9 @@
             différentes annonces de locations d'appartements entre particuliers
             en France.
           </p>
-          <a href="https://github.com/Arryyl/projet_kasa">Lien GitHub</a>
+          <a href="https://github.com/Arryyl/projet_kasa" target="_blank"
+            >Lien GitHub</a
+          >
           <div class="tags">
             <div>Front-end</div>
             <div>React</div>
@@ -105,7 +106,9 @@
             sur le site et la moyenne des notations, ainsi que les livres les
             mieux notés du site.
           </p>
-          <a href="https://github.com/Arryyl/P7_Web_Livres">Lien GitHub</a>
+          <a href="https://github.com/Arryyl/P7_Web_Livres" target="_blank"
+            >Lien GitHub</a
+          >
           <div class="tags">
             <div>Back-end</div>
             <div>NodeJs</div>
@@ -114,104 +117,28 @@
       </div>
     </section>
 
-    <section id="offres">
-      <h2>Offres d'Emploi</h2>
-      <h3>Offres d'Emplois trouvé sur indeed</h3>
-      <div class="offre">
-        <h3>Développeur Full Stack - R&D</h3>
-        <p>
-          Notre activité étant en pleine croissance, nous recherchons de
-          nouveaux talents, afin de rejoindre nos équipes de développeurs Full
-          Stack au département R&D.
-        </p>
-        <p>
-          En travaillant en méthode Agile, l'objectif est de faire évoluer les
-          fonctionnalités de nos logiciels de gestion, comptabilité et paie.
-        </p>
-        <p>Alors envie de rejoindre une Team de développeurs dynamique ?</p>
-        <p>Vos missions :</p>
-        <ul>
-          <li>Concevoir et développer en utilisant diverses technologies</li>
-          <li>Améliorer et maintenir les modules des logiciels</li>
-          <li>Tester les nouvelles fonctionnalités</li>
-          <li>Participer aux réunions d'équipe et discussions technique</li>
-          <li>Réaliser la veille technologique (Stay connected)</li>
-        </ul>
-        <a
-          href="https://fr.indeed.com/q-d%C3%A9veloppeur-web-emplois.html?vjk=0c1118579d349d60&advn=7144240230772744"
-          >Lien vers l'offre</a
-        >
-      </div>
-
-      <div class="offre">
-        <h3>Développeur d'Applications</h3>
-        <p>Vos responsabilités :</p>
-        <ul>
-          <li>
-            Élaborer de nouvelles fonctionnalités pour l'application existante
-            ainsi que pour les futures applications à venir.
-          </li>
-          <li>Assurer la maintenance de la plateforme web.</li>
-          <li>Développer une application mobile.</li>
-          <li>
-            Participer aux processus de test et de déploiement des applications.
-          </li>
-          <li>Mettre en place une intégration continue CI/CD.</li>
-          <li>Effectuer une veille technique et technologique.</li>
-        </ul>
-        <a
-          href="https://fr.indeed.com/jobs?q=developpeur+dapplication&l=&vjk=de18a9e4e9b1276e"
-          >Lien vers l'offre</a
-        >
-      </div>
-
-      <div class="offre">
-        <h3>Développeur Back-end confirmé</h3>
-        <p>Le poste :</p>
-        <p>
-          Acteur incontournable de la FoodTech, cette startup pleine d'avenir
-          cherche à construire ses équipes de demain afin accompagner son
-          développement. Rejoindre une équipe où tout est à faire, où rien n’est
-          figé, c’est ce que propose cette société ! Rejoindre l’entreprise à ce
-          stade c’est l’occasion d’apporter son expertise et de voir l'impact de
-          son travail au quotidien. Leur objectif : révolutionner l’industrie de
-          la Foodtech et proposer aux restaurateurs des solutions clés en main
-          leur permettant d’augmenter et de diversifier leurs revenus. Nous
-          recherchons activement un développeur Back-end confirmé !
-        </p>
-        <p>Les responsabilités :</p>
-        <ul>
-          <li>
-            Vous allez participer au développement de nouvelles features
-            Front-end d’un projet de grande ampleur qui est en évolution
-            permanente
-          </li>
-          <li>
-            Vous allez délivrer des implémentations efficaces et évolutives dans
-            un environnement au rythme soutenu
-          </li>
-          <li>
-            Vous collaborez avec vos pairs, avec l'état d'esprit qu'aider les
-            autres signifie apprendre et grandir soi-même
-          </li>
-        </ul>
-        <a
-          href="https://fr.indeed.com/jobs?q=developpeur+backend&l=&vjk=eeabb1c954d0cb4c&advn=4190676325902957"
-          >Lien vers l'offre</a
-        >
-      </div>
-    </section>
-
     <footer>
       <div class="liens">
-        <a href="mailto:ettomaz7@gmail.com"
+        <a href="mailto:ettomaz7@gmail.com" target="_blank"
           ><i class="fa-solid fa-envelope fa-lg" style="color: #ffffff"></i
         ></a>
-        <a href="https://github.com/Arryyl"
+        <a href="https://github.com/Arryyl" target="_blank"
           ><i class="fa-brands fa-github fa-lg" style="color: #ffffff"></i
         ></a>
       </div>
       <p>&copy; 2023 Erwann TOMAZ</p>
     </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
