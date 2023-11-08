@@ -1,42 +1,67 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Cabin", sans-serif;
   margin: 0;
   padding: 0;
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  color: rgb(74, 74, 74); /* Couleur de texte foncé */
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(110, 107, 107, 0.651);
   color: #fff;
   padding: 1rem;
-  text-align: center;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
+.name {
+  text-align: left;
+}
+
+.name h1,
+.name h2 {
   margin: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease; /* Ajout de l'animation */
+}
+
+.name h1 {
+  color: #e59560;
+}
+
+.name h2 {
+  color: #ffd5af;
+}
+
+.name:hover h1,
+.name:hover h2 {
+  transform: scale(1.1); /* Effet d'agrandissement au survol */
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  text-align: right;
+  margin: 0;
 }
 
 nav li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 7px;
+  white-space: nowrap; /* Empêche le dernier bouton de se casser sur une nouvelle ligne */
 }
 
 nav a {
   color: #e59560;
   text-decoration: none;
-  font-family: "Cabin", sans-serif;
   font-size: large;
   font-weight: bold;
   position: relative;
@@ -44,6 +69,7 @@ nav a {
 
 nav a:hover {
   color: #ffd5af;
+  transition: color 0.3s ease;
 }
 
 nav a.active::before {
@@ -60,16 +86,142 @@ nav a.active::before {
 
 section {
   padding: 2rem;
-  margin-top: 80px;
+  margin-top: 2em;
   background-color: #f6f4e8;
   border-radius: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#a-propos {
+  background-color: #f6f4e8; /* Couleur pastel */
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 100px auto; /* Centrage vertical */
+  max-width: 800px; /* Limite la largeur du contenu */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fade-in 1s;
 }
 
 #a-propos h1 {
+  color: #f26659; /* Couleur pastel */
+  font-size: 2em;
+}
+
+#a-propos p {
+  color: #4a4a4a; /* Couleur de texte foncé */
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+#a-propos p:first-child {
+  margin-top: 0; /* Supprime la marge en haut du premier paragraphe */
+}
+
+#a-propos p:last-child {
+  margin-bottom: 0; /* Supprime la marge en bas du dernier paragraphe */
+}
+
+/* Ajoutez des animations (optionnel) */
+#a-propos {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#competences {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.image-container {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+#competences ul {
+  list-style: none;
+  padding: 0;
+}
+
+#competences li {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+#competences li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.projet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligne les projets en haut */
+  margin-top: 20px;
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
+}
+
+.projet {
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+}
+
+.image-container {
   text-align: center;
-  color: #f26659;
-  font-family: "Cabin", sans-serif;
-  font-size: x-large;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+#projets h2 {
+  text-align: center;
+}
+
+#projets h3 {
+  text-align: center;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.tags div {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.tags div:hover {
+  background-color: #ccc;
 }
 
 footer {
@@ -94,19 +246,18 @@ footer .liens {
   margin-top: 25px;
 }
 
-.projet {
-  margin-bottom: 2rem;
-}
-
-.projet img {
-  max-width: 100%;
-}
-
+.projet,
 .offre {
   margin-bottom: 2rem;
 }
 
-.offre a {
+.projet img,
+.offre img {
+  max-width: 100%;
+}
+
+.offre a,
+.projet a {
   color: #333;
   background-color: #fff;
   padding: 5px 10px;
@@ -114,7 +265,33 @@ footer .liens {
   border-radius: 5px;
 }
 
-.offre a:hover {
+.offre a:hover,
+.projet a:hover {
   background-color: #333;
   color: #fff;
+}
+
+section h2,
+section h3,
+.projet h3,
+.offre h3 {
+  color: #f26659; /* Couleur pastel */
+}
+
+section p,
+.projet p,
+.offre p {
+  color: #4a4a4a; /* Couleur de texte foncé */
+}
+
+.projet a,
+.offre a {
+  color: #fff;
+  background-color: #333;
+}
+
+.projet a:hover,
+.offre a:hover {
+  background-color: #fff;
+  color: #333;
 }

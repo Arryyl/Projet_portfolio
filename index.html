@@ -17,7 +17,11 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
+      <div class="name">
+        <h1>Erwann</h1>
+        <h2>Tomaz</h2>
+      </div>
       <nav>
         <ul>
           <li><a href="#a-propos">À propos</a></li>
@@ -30,7 +34,6 @@
 
     <section id="a-propos">
       <h1>À Propos</h1>
-      <h2>Erwann Tomaz</h2>
       <p>
         Passionné de jeux vidéo et de création informatique, j'ai développé des
         compétences en tant que développeur web. Mon objectif est de devenir
@@ -42,48 +45,72 @@
     </section>
 
     <section id="competences">
-      <h2>Compétences et Formations</h2>
-      <h3>Formation chez Openclassrooms (2022-2023)</h3>
-      <p>Développement Web :</p>
-      <ul>
-        <li>Intégration web HTML/CSS</li>
-        <li>Utilisation de GitHub</li>
-        <li>Utilisation des DevTools pour le débogage</li>
-        <li>Javascript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>APIs & frameworks</li>
-        <li>...</li>
-      </ul>
+      <div class="content">
+        <h2>Compétences et Formations</h2>
+        <h3>Formation chez Openclassrooms (2022-2023)</h3>
+        <p>Développement Web :</p>
+        <ul>
+          <li><i class="fas fa-code"></i> Intégration web HTML/CSS</li>
+          <li><i class="fab fa-github"></i> Utilisation de GitHub</li>
+          <li>
+            <i class="fas fa-bug"></i> Utilisation des DevTools pour le débogage
+          </li>
+          <li><i class="fab fa-js"></i> Javascript</li>
+          <li><i class="fab fa-react"></i> React</li>
+          <li><i class="fab fa-node"></i> Node.js</li>
+          <li><i class="fas fa-cogs"></i> APIs & frameworks</li>
+          <li>...</li>
+        </ul>
+      </div>
+      <div class="image-container">
+        <img src="images/formations.png" alt="Formations" />
+      </div>
     </section>
 
     <section id="projets">
       <h2>Mes Projets</h2>
       <h3>Exemple de deux projets</h3>
-      <div class="projet">
-        <img src="chemin/vers/image1.jpg" alt="Projet Kasa" />
-        <h3>Projet Kasa</h3>
-        <p>
-          Ce projet utilise Create React App pour démarrer rapidement le
-          développement d'une application web basée sur React en frontend.
-        </p>
-        <p>Difficultés rencontrées : ...</p>
-        <a href="https://github.com/Arryyl/projet_kasa">Lien GitHub</a>
-      </div>
 
-      <div class="projet">
-        <img src="chemin/vers/image2.jpg" alt="Projet Mon Vieux Grimoire" />
-        <h3>Projet Mon Vieux Grimoire</h3>
-        <p>
-          Site permettant aux utilisateurs de se créer un compte, de se
-          connecter et de faire des entrées de livre avec leur notation. Le site
-          permet aussi de noter les livres que les autres utilisateurs ont mis
-          sur le site. On peut aussi voir tous les livres disponibles sur le
-          site et la moyenne des notations, ainsi que les livres les mieux notés
-          du site.
-        </p>
-        <p>Difficultés rencontrées : ...</p>
-        <a href="https://github.com/Arryyl/P7_Web_Livres">Lien GitHub</a>
+      <div class="projet-container">
+        <div class="projet">
+          <div class="image-container">
+            <img src="images/kasa.png" alt="Projet Kasa" />
+          </div>
+          <h3>Projet Kasa</h3>
+          <p>
+            C'est un projet qui permet aux utilisateurs de consulter les
+            différentes annonces de locations d'appartements entre particuliers
+            en France.
+          </p>
+          <a href="https://github.com/Arryyl/projet_kasa">Lien GitHub</a>
+          <div class="tags">
+            <div>Front-end</div>
+            <div>React</div>
+          </div>
+        </div>
+
+        <div class="projet">
+          <div class="image-container">
+            <img
+              src="images/monvieuxgrimoire.png"
+              alt="Projet Mon Vieux Grimoire"
+            />
+          </div>
+          <h3>Projet Mon Vieux Grimoire</h3>
+          <p>
+            Site permettant aux utilisateurs de se créer un compte, de se
+            connecter et de faire des entrées de livre avec leur notation. Le
+            site permet aussi de noter les livres que les autres utilisateurs
+            ont mis sur le site. On peut aussi voir tous les livres disponibles
+            sur le site et la moyenne des notations, ainsi que les livres les
+            mieux notés du site.
+          </p>
+          <a href="https://github.com/Arryyl/P7_Web_Livres">Lien GitHub</a>
+          <div class="tags">
+            <div>Back-end</div>
+            <div>NodeJs</div>
+          </div>
+        </div>
       </div>
     </section>
 
