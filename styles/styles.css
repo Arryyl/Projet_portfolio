@@ -291,3 +291,94 @@ section p,
   background-color: #fff;
   color: #333;
 }
+
+@media only screen and (max-width: 370px) {
+  .name {
+    display: none;
+  }
+
+  .name h1,
+  .name h2 {
+    font-size: 1rem;
+  }
+
+  nav li,
+  nav a {
+    display: inline-block;
+    justify-content: space-between;
+    margin: 10px 0 0 1em;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: medium;
+  }
+
+  #a-propos,
+  #competences,
+  #projets {
+    margin: 5em 1em;
+  }
+
+  .content,
+  .image-container {
+    margin: 0;
+  }
+
+  #competences {
+    display: grid;
+  }
+
+  #competences .image-container img,
+  #projets .image-container img {
+    margin: 0 auto 1em;
+    max-width: 100%;
+  }
+
+  #projets a {
+    display: block;
+    text-align: center;
+  }
+
+  .projet,
+  .offre {
+    width: 100%;
+  }
+
+  .projet-container {
+    flex-direction: column;
+  }
+
+  .projet,
+  .offre,
+  .projet img,
+  .offre img,
+  .tags div,
+  footer a {
+    margin: 10px 0;
+  }
+
+  footer .liens {
+    margin-top: 10px;
+  }
+
+  .content {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .content .image-container {
+    order: 2;
+  }
+
+  .content .image-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+}
