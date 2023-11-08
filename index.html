@@ -134,9 +134,19 @@
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
 
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            const offset =
+              targetElement.offsetTop -
+              document.querySelector("#header").offsetHeight;
+
+            window.scrollTo({
+              top: offset,
+              behavior: "smooth",
+            });
+          }
         });
       });
     </script>
